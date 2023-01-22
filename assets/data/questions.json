@@ -1,0 +1,233 @@
+{
+  "questions": [
+    {
+      "questionText": "Which of the following does TypeScript use to specify types?",
+      "options": [
+        {
+          "option1": ":",
+          "correct": true
+        },
+        {
+          "option2": ";"
+        },
+        {
+          "option3": "!"
+        },
+        {
+          "option4": "&"
+        }
+      ],
+      "explanation": "TS uses a colon (:) to separate the property name from the property type"
+    },
+    {
+      "questionText": "Which of the following is NOT a type used in TypeScript?",
+      "options": [
+        {
+          "option1": "number"
+        },
+        {
+          "option2": "string"
+        },
+        {
+          "option3": "boolean"
+        },
+        {
+          "option4": "enum",
+          "correct": true
+        }
+      ],
+      "explanation": "enum is not used as a type in TypeScript"
+    },
+    {
+      "questionText": "How can we specify properties and methods for an object in TypeScript?",
+      "options": [
+        {
+          "option1": "Use classes."
+        },
+        {
+          "option2": "Use interfaces.",
+          "correct": true
+        },
+        {
+          "option3": "Use enums."
+        },
+        {
+          "option4": "Use async/await."
+        }
+      ],
+      "explanation": "interfaces are typically used to list the properties and methods for an object"
+    },
+    {
+      "questionText": "How else can Array<number> be written in TypeScript?",
+      "options": [
+        {
+          "option1": "@number"
+        },
+        {
+          "option2": "number[]",
+          "correct": true
+        },
+        {
+          "option3": "number!"
+        },
+        {
+          "option4": "number?"
+        }
+      ],
+      "explanation": "number[] is another way of writing Array<number> in TypeScript"
+    },
+    {
+      "questionText": "In which of these does a class take parameters?",
+      "options": [
+        {
+          "option1": "constructor",
+          "correct": true
+        },
+        {
+          "option2": "destructor"
+        },
+        {
+          "option3": "import"
+        },
+        {
+          "option4": "subscribe"
+        }
+      ],
+      "explanation": "a constructor is used by a class to take in parameters"
+    },
+    {
+      "questionText": "Which is NOT an access modifier?",
+      "options": [
+        {
+          "option1": "private"
+        },
+        {
+          "option2": "protected"
+        },
+        {
+          "option3": "public"
+        },
+        {
+          "option4": "async",
+          "correct": true
+        }
+      ],
+      "explanation": "async is not used as an access modifier type in TypeScript"
+    },
+    {
+      "questionText": "Which keyword allows us to share information between files in TypeScript?",
+      "options": [
+        {
+          "option1": "import"
+        },
+        {
+          "option2": "export",
+          "correct": true
+        },
+        {
+          "option3": "async"
+        },
+        {
+          "option4": "constructor"
+        }
+      ],
+      "explanation": "the export keyword allows for the information to be transmitted between files"
+    },
+    {
+      "questionText": "Which is an array method to generate a new array based on a condition?",
+      "options": [
+        {
+          "option1": "filter",
+          "correct": true
+        },
+        {
+          "option2": "map"
+        },
+        {
+          "option3": "async"
+        },
+        {
+          "option4": "enum"
+        }
+      ],
+      "explanation": "filter is a method used to conditionally create a new array"
+    },
+    {
+      "questionText": "How is a property accessible within a class?",
+      "options": [
+        {
+          "option1": "Using this.propertyName",
+          "correct": true
+        },
+        {
+          "option2": "Accessors"
+        },
+        {
+          "option3": "Destructuring"
+        },
+        {
+          "option4": "Arrow function"
+        }
+      ],
+      "explanation": "this.propertyName is the way to access a specific property within a class"
+    }
+  ],
+  "signup": [
+    {
+      "fullname": "haritha p",
+      "email": "haritha@gmail.com",
+      "password": "123456",
+      "mobile": 9845789652,
+      "id": 1
+    },
+    {
+      "fullname": "aswathy",
+      "email": "aswathy@gmail.com",
+      "password": "123456",
+      "mobile": 9845788596,
+      "id": 2
+    },
+    {
+      "fullname": "vijesh",
+      "email": "vijesh@gmail.com",
+      "password": "123456",
+      "mobile": 9845789685,
+      "id": 3
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "password": "",
+      "mobile": "",
+      "id": 4
+    },
+    {
+      "fullname": "varsha",
+      "email": "varsha@gmail.com",
+      "password": "789456",
+      "mobile": 9845785,
+      "id": 5
+    },
+    {
+      "fullname": "",
+      "email": "",
+      "password": "",
+      "mobile": 1,
+      "id": 6
+    },
+    {
+      "fullname": "haritha kesavan",
+      "email": "haritha@gmail.com",
+      "password": "147852",
+      "mobile": 9845788596,
+      "id": 7
+    },
+    {
+      "fullname": "achu",
+      "email": "aswathy23@gmail.com",
+      "password": "123456",
+      "mobile": 9845788596,
+      "id": 8
+    }
+  ]
+}
