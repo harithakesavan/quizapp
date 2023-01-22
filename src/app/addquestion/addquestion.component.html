@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href=""><font style="color:white">Start Quiz</font></a>
+        <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+              <button class="btn btn-danger" routerLink="/login">Logout</button>&nbsp;&nbsp;&nbsp;&nbsp;
+              
+            </ul>
+        </div>
+    </div>
+</nav>
+<br><br><br>
+
+
+
+
+<div class="justify-content-between p-3">
+    <h2>Add New Quiz</h2><br>
+    <form  [formGroup]="addquizform" (ngSubmit)="addquiz()">
+    
+        <input type="text" name="questionText" formControlName="questionText" placeholder="enter the quiz question" class="form-control" style="width:800px">&nbsp;&nbsp;<br><br>
+        
+   
+   <input type="text" name="option1" placeholder="option 1" formControlName="option1" style="width:500px" class="form-control">&nbsp;&nbsp;&nbsp;<br><br>
+    <input type="text" name="option2" placeholder="option 2" formControlName="option2" style="width:500px" class="form-control">&nbsp;&nbsp;&nbsp;<br><br>
+    <input type="text" name="option3" placeholder="option 3" formControlName="option3"style="width:500px" class="form-control">&nbsp;&nbsp;&nbsp;<br><br>
+    <input type="text" name="option4" placeholder="option 4"  formControlName="option4"style="width:500px" class="form-control">&nbsp;&nbsp;&nbsp;<br><br>
+    <input type="text" name="correctans" placeholder="enter the correct option"FormControlName="correctans" class="form-control" style="width:500px">&nbsp;&nbsp;&nbsp;<br><br>
+
+    <input type="text" name="explanation" formControlName="explanation" placeholder="enter the explanation" class="form-control" style="width:500px">&nbsp;&nbsp;<br><br>
+
+    <button class="btn btn-primary" type="submit" >Add quiz</button>
+
+    
+</form>
+</div>

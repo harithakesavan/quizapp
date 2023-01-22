@@ -1,0 +1,72 @@
+
+<nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href=""><font style="color:white">Start Quiz</font></a>
+        <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+              <button class="btn btn-success" routerLink="/register">sign up</button>&nbsp;&nbsp;&nbsp;&nbsp;
+              <button class="btn btn-success" routerLink="/login">Login</button>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Sign Up</h1>
+                    <h6>
+                        Register Yourself!!!
+                    </h6>
+             </div>
+             <form >
+             <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Full Name</label>
+                    <input type="text" formControlName="fullname" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div *ngIf="this.signupForm.get('fullname')?.touched&&this.signupForm.get('fullname')?.errors"
+                  style="color:red ;">
+                      invalid fullname
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Mobile Number</label>
+                    <input type="number" formControlName="mobile" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div *ngIf="this.signupForm.get('mobile')?.touched&&this.signupForm.get('mobile')?.errors"
+                  style="color:red ;">
+                      mobile number required
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email"  formControlName="email"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div *ngIf="this.signupForm.get('email')?.touched&&this.signupForm.get('email')?.errors"
+                  style="color:red ;">
+                     invalid email
+              </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div *ngIf="this.signupForm.get('password')?.touched&&this.signupForm.get('password')?.errors"
+                  style="color:red ;">
+                      invalid password
+              </div>
+                
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+              </form>
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+

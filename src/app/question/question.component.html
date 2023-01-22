@@ -1,0 +1,96 @@
+<nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href=""><font style="color:white">Start Quiz</font></a>
+        <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+              <button class="btn btn-danger" routerLink="/login">Logout</button>&nbsp;&nbsp;&nbsp;&nbsp;
+              
+            </ul>
+        </div>
+    </div>
+</nav>
+<br><br><br>
+
+
+
+
+
+<div class="container mt-5">
+    <div class="card">
+       <div class="d-flex justify-content-between p-3">
+        <div class="image">
+            <img src="https://i.postimg.cc/qqL1k7r1/quiz.jpg" alt="Logo" width="60"  class="d-inline-block align-text-top">
+        </div>
+            <div class="quiz-header">
+
+            <h4 style="font-family:cursive;">Angular & Typescript Quiz</h4>
+            <span
+                style="font-style:italic;">
+               <h3> Welcome {{name}}</h3> 
+            </span>
+        </div>
+       </div>
+       <ng-container *ngIf="!isquizcompleted" >
+        <div class="d-flex justify-content-around py-3">
+            <div class="score">
+    <h5>{{points}} points</h5>
+            </div>
+            <div class="question-remain">
+    <span style="font-style:italic;">Question {{currentquestion+1}} of 9</span>
+            </div>
+            <div class="timer">
+    <h5>{{counter}} sec</h5>
+            </div>
+           </div>
+           <div class="progress mb-3">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width':progress+'%'}" aria-label="Success striped example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <div class="question">
+    <div class="card">
+        <h3>
+            {{questionList[currentquestion]?.questionText}}
+        </h3>
+    </div>
+          </div>
+          <div class="options">
+    <ol *ngFor="let option of questionList[currentquestion]?.options">
+        <li (click)="answer(currentquestion+1,option)">
+            <div  appChangeBg [isCorrect]="option.correct"    class="card">
+    {{option.option1}}
+    {{option.option2}}
+    {{option.option3}}
+    {{option.option4}}
+            </div>
+        </li>
+     
+    </ol>
+          </div>
+          <div class="d-flex justify-content-between">
+            <button [disabled]="currentquestion===0" class="btn" (click)="previousquestion()"><i class="fa text-primary fa-chevron-left fa-3x" aria-hidden="true"></i></button>
+            <button class="btn" (click)="resetquiz()"><i class="fa  text-primary fa-refresh fa-3x" aria-hidden="true"></i></button>
+            <button [disabled]="currentquestion===8" class="btn" (click)="nextquestion()"><i class="fa text-primary fa-chevron-right fa-3x" aria-hidden="true"></i></button>
+          </div>
+       </ng-container>
+       <ng-container *ngIf="isquizcompleted">
+        <div class="d-flex justify-content-between">
+            <img  style="width:50%" class="img-fluid col-sm-12 mx-auto" src="https://i.postimg.cc/XJFtG93Y/congrats.png" alt>
+        <div class="result text-center col-md-6 col-sm-12">
+            <h3>Congratulations!!!!<br>
+                you have completed the quiz<br>
+                below is your results:
+                <p>Total number of questions attempted :{{questionList.length}}</p>
+                <p>Total  number of correct answers:{{correctanswer}}</p>
+                <p>Total number of wrong answers:{{incorrectanswer}}</p>
+                <p>your score:{{points}}</p>
+                </h3>
+
+        </div>
+        </div>
+
+       </ng-container>
+    </div>
+</div>
